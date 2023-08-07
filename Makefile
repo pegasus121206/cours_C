@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c99
 LIBS = -lcs50
-EXECUTABLE = hello
+EXECUTABLE = points
 
 all: $(EXECUTABLE)
 	@make run EXECUTABLE=$(EXECUTABLE)
