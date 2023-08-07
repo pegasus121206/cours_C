@@ -5,12 +5,14 @@ EXECUTABLE = hello
 
 all: $(EXECUTABLE)
 	@make run EXECUTABLE=$(EXECUTABLE)
+	
 $(EXECUTABLE): $(EXECUTABLE).c
 	@$(CC) $(CFLAGS)  -o $@ $< $(LIBS)
 	@make run EXECUTABLE=$(EXECUTABLE)
 
 run: $(EXECUTABLE)
 	@	./$(EXECUTABLE)
+	@make clean EXECUTABLE=$(EXECUTABLE)
 
 clean:
 	@rm -f $(EXECUTABLE)
