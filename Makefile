@@ -1,20 +1,20 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c99
 LIBS = -lcs50
-EXECUTABLE = points
+v = points
 
-all: $(EXECUTABLE)
-	@make run EXECUTABLE=$(EXECUTABLE)
+all: $(v)
+	@make run v=$(v)
 	
-$(EXECUTABLE): $(EXECUTABLE).c
+$(v): $(v).c
 	@$(CC) $(CFLAGS)  -o $@ $< $(LIBS)
-	@make run EXECUTABLE=$(EXECUTABLE)
+	@make run v=$(v)
 
-run: $(EXECUTABLE)
-	@	./$(EXECUTABLE)
-	@make clean EXECUTABLE=$(EXECUTABLE)
+run: $(v)
+	@	./$(v)
+	@make clean v=$(v)
 
 clean:
-	@rm -f $(EXECUTABLE)
+	@rm -f $(v)
 
 .PHONY: all run clean
