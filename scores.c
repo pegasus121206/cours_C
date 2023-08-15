@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    int scores [3]
+    int scores [3];
 
     scores[0] = get_int("Score: ");
     scores[1] = get_int("Score: ");
