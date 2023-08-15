@@ -9,4 +9,4 @@ int main(void)
     printf("%i\n", i);
 }
 
- int get_negative_int(void)
+ int get_negative_int(void){}
