@@ -2,14 +2,26 @@
     "version": "0.2.0",
     "configurations": [
       {
-        "name": "Debug Node.js",
-        "type": "node",
+        "name": "Debug C Program",
+        "type": "cppdbg",
         "request": "launch",
-        "program": "${workspaceFolder}/path/to/your/script.js", // Update the path to your script
+        "program": "${workspaceFolder}/buggy",
+        "args": [],
+        "stopAtEntry": false,
         "cwd": "${workspaceFolder}",
-        "runtimeExecutable": "node", // Path to the node executable, typically just "node"
-        "skipFiles": ["<node_internals>/**"],
-        "outFiles": ["${workspaceFolder}/out"]
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ],
+        "preLaunchTask": "build",
+        "miDebuggerPath": "/usr/bin/gdb"
       }
     ]
   }
+  
