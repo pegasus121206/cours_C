@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c99
 LIBS = -lcs50
-v = points
+v = buggy
 
 all: $(v)
 	@make run v=$(v)
